@@ -1,0 +1,62 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<div id="content" class="p-4 p-md-5 pt-5">
+
+	<h2 class="mb-4">This is a dummy REST API website I made to learn more about API testing.</h2>
+	<h6>This page will list all of the rest services. These are fake online REST APIs for testing and prototyping sample applications that use rest calls to display listings and crud features. This rest api tutorials, faking a server, and sharing code examples can all be used.</h6>
+	<br>
+	<table class="table">
+		<thead class="thead-dark">
+		  <tr>
+			<th scope="col">#</th>
+			<th scope="col">Route</th>
+			<th scope="col">Type</th>
+			<th scope="col">Description</th>
+			<th scope="col">Details</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<th scope="row">1</th>
+			<td>/employee</td>
+			<td>GET</td>
+			<td>Get the data of all Employees</td>
+			<td><a href= "/getall" >Details</a></td>
+		  </tr>
+		  <tr>
+			<th scope="row">2</th>
+			<td>/employee/{id}</td>
+			<td>GET</td>
+			<td>Get the data of a single employee</td>
+			<td><a href= "/getone" >Details</a></td>
+		  </tr>
+		  <tr>
+			<th scope="row">3</th>
+			<td>/employee</td>
+			<td>POST</td>
+			<td>Create new record in database</td>
+			<td><a href= "/create" >Details</a></td>
+		  </tr>
+		  <tr>
+			<th scope="row">4</th>
+			<td>/employee/{id}</td>
+			<td>PUT</td>
+			<td>Update an employee record</td>
+			<td><a href= "/update" >Details</a></td>
+		  </tr>
+		  <tr>
+			<th scope="row">5</th>
+			<td>/employee/{id}</td>
+			<td>DELETE</td>
+			<td>Delete an employee record</td>
+			<td><a href= "/delete" >Details</a></td>
+		  </tr>
+		</tbody>
+	  </table>
+	  
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+<style>
+    pre{
+        color: blueviolet;
+    }
+</style>
+<div id="content" class="p-4 p-md-5 pt-5">
+
+	<h2 class="mb-4">Update a record in the database.</h2>
+	<table class="table">
+		<thead class="thead-dark">
+		  <tr>
+			<th scope="col">#</th>
+			<th scope="col">Route</th>
+			<th scope="col">Method</th>
+			<th scope="col">Sample JSON</th>
+			<th scope="col">Result</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<th scope="row">1</th>
+			<td>/employee/{id}</td>
+			<td>PUT</td>
+			<td>
+<pre>
+{
+    "name":"Smith2",
+    "age":40,
+    "sallary":"160000.00",
+    "designation":"Something",
+    "yow":"12"
+}
+
+</pre>
+
+            </td>
+			<td>
+
+<pre>
+{
+    "age": 40,
+    "designation": "Something",
+    "name": "Smith2",
+    "sallary": 160000.0,
+    "yow": 12
+}
+
+</pre>
+
+            </td>
+		  </tr>
+		</tbody>
+	  </table>
+	  
+</div>
+</div>
+
+{% endblock %}

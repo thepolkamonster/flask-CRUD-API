@@ -1,0 +1,60 @@
+{% extends 'basic.html' %}
+
+{% block content %}
+
+<style>
+    pre{
+        color: blueviolet;
+    }
+</style>
+
+<div id="content" class="p-4 p-md-5 pt-5">
+
+	<h2 class="mb-4">This is a dummy api website I made to learn more about API testing.</h2>
+	<h4>The app routes are: </h4>
+	<table class="table">
+		<thead class="thead-dark">
+		  <tr>
+			<th scope="col">#</th>
+			<th scope="col">Route</th>
+			<th scope="col">Method</th>
+			<th scope="col">Sameple JSON</th>
+			<th scope="col">Result</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<th scope="row">1</th>
+			<td>/employee</td>
+			<td>GET</td>
+			<td>-----</td>
+           
+			<td> 
+<pre>
+[
+    {
+        "age": 40,
+        "designation": "Something",
+        "id": 1,
+        "name": "Smith",
+        "sallary": 160000.0,
+        "yow": 12
+    },
+    {
+        "age": 32,
+        "designation": "Something Else",
+        "id": 2,
+        "name": "Waldo",
+        "sallary": 125000.0,
+        "yow": 6
+    }
+    .....
+]</pre></td>
+		  </tr>
+		</tbody>
+	  </table>
+	  
+</div>
+</div>
+
+{% endblock %}
