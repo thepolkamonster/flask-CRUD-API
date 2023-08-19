@@ -7,7 +7,7 @@ from views import blp as PagesBlueprint
 
 def create_app():
     app = Flask(__name__)
-    app.config["API_TITLE"] = "URL Shortner"
+    app.config["API_TITLE"] = "Dummy Api"
     app.config['SECRET_KEY'] = 'key'
     app.config["API_VERSION"] = "v1"
     app.config["OPENAPI_VERSION"] = "3.0.3"
