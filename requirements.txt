@@ -5,3 +5,5 @@ Flask-Sqlalchemy
 Flask-Migrate
 Flask-WTF
 marshmallow
+requests
+pytest

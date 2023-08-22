@@ -3,9 +3,9 @@
 {% block content %}
 
 <style>
-    pre{
-        color: blueviolet;
-    }
+	pre {
+		color: blueviolet;
+	}
 </style>
 
 <div id="content" class="p-4 p-md-5 pt-5">
@@ -13,23 +13,23 @@
 	<h2 class="mb-4">Retrieve all records of the database.</h2>
 	<table class="table">
 		<thead class="thead-dark">
-		  <tr>
-			<th scope="col">#</th>
-			<th scope="col">Route</th>
-			<th scope="col">Method</th>
-			<th scope="col">Sameple JSON</th>
-			<th scope="col">Result</th>
-		  </tr>
+			<tr>
+				<th scope="col">#</th>
+				<th scope="col">Route</th>
+				<th scope="col">Method</th>
+				<th scope="col">Sameple JSON</th>
+				<th scope="col">Result</th>
+			</tr>
 		</thead>
 		<tbody>
-		  <tr>
-			<th scope="row">1</th>
-			<td>/employee</td>
-			<td>GET</td>
-			<td>-----</td>
-           
-			<td> 
-<pre>
+			<tr>
+				<th scope="row">1</th>
+				<td>api/employee</td>
+				<td>GET</td>
+				<td>-----</td>
+
+				<td rowspan="3">
+					<pre>
 [
     {
         "age": 40,
@@ -48,12 +48,24 @@
         "yow": 6
     }
     .....
-]</pre></td>
-		  </tr>
-		</tbody>
-	  </table>
-	  
-</div>
-</div>
+]</pre>
+				</td>
+			</tr>
+				<td colspan="4" class = "font-weight-light">
+					<h6>The current state of the database</h6>
+					{% for item in res %}
 
-{% endblock %}
+					{{item}} <br>
+
+					{% endfor %}
+
+					{% endblock %}
+
+				</td>
+
+			</tr>
+		</tbody>
+	</table>
+
+</div>
+</div>

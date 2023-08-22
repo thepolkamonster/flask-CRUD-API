@@ -11,7 +11,7 @@ blp = Blueprint("routes", __name__, description = "The main routes Blueprint")
 @blp.route('/')
 def index():
     return render_template('index.html')
-@blp.route('/employee')
+@blp.route('/api/employee')
 class Employee(MethodView):
     @blp.response(200, EmpSchema(many = True))
     def get(self):
@@ -29,7 +29,7 @@ class Employee(MethodView):
             abort(500, message = 'Error While Inserting')
         return temp_emp
     
-@blp.route('/employee/<string:id_req>')
+@blp.route('/api/employee/<string:id_req>')
 class Empop(MethodView):
     @blp.response(201, EmpSchema)
     def get(self,id_req):

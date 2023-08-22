@@ -11,9 +11,12 @@ class EmpModel(db.Model):
     designation = db.Column(db.String(20))
     yow = db.Column(db.Integer)
 
-    # def __init__ (self, name,sallary, age, designation, yow):
-    #     self.name = name
-    #     self.age = age
-    #     self.sallary = sallary
-    #     self.designation = designation
-    #     self.yow = yow
+    def __init__ (self, name,sallary, age, designation, yow):
+        self.name = name
+        self.age = age
+        self.sallary = sallary
+        self.designation = designation
+        self.yow = yow
+
+    def __repr__(self):
+        return f"NAME: {self.name} AGE: {self.age} SALLARY: {self.sallary} DESIGNATION: {self.designation}\n"

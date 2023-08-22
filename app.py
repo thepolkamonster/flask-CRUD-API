@@ -4,6 +4,7 @@ from flask_migrate import Migrate
 from db import db
 from routes import blp as RoutesBlueprint
 from views import blp as PagesBlueprint
+from handlers import error_pages
 
 def create_app():
     app = Flask(__name__)
@@ -28,6 +29,7 @@ def create_app():
     api = Api(app)
     api.register_blueprint(RoutesBlueprint)
     api.register_blueprint(PagesBlueprint)
+    api.register_blueprint(error_pages)
 
     return app
 

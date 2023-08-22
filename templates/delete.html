@@ -6,6 +6,9 @@
     pre{
         color: blueviolet;
     }
+	.inline-label{
+		display: grid;
+	}
 </style>
 
 <div id="content" class="p-4 p-md-5 pt-5">
@@ -23,10 +26,10 @@
 		</thead>
 		<tbody>
 			<th scope="row">1</th>
-			<td>/employee/{id}</td>
+			<td>api/employee/{id}</td>
             <td> DELETE </td>
 			<td> ----- </td>
-			<td><pre>
+			<td rowspan="3"><pre>
 {
     "age": 40,
     "designation": "Something",
@@ -37,6 +40,18 @@
 }
         </pre>
         </td>
+		  </tr>
+		  <tr>
+			<td>
+				<form method="post">
+					{{form.hidden_tag()}}
+					<div>{{form.id.label(class = "inline-label")}}{{form.id}}</div>
+					<div>{{form.submit(class = "btn btn-primary mt-3 mb-1")}}</div>
+				</form>
+			</td>
+			<td colspan="3">
+				<H6>This can either be done by filling this form on the front end or just sending a <b>DELETE</b> request to <b>LocalHost URL/api/empoyee/{id}</b></H6>
+			</td>
 		  </tr>
 		</tbody>
 	  </table>

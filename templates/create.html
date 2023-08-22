@@ -3,8 +3,12 @@
 {% block content %}
 
 <style>
-    pre{
+    pre {
         color: blueviolet;
+    }
+
+    .inline-label {
+        display: grid;
     }
 </style>
 
@@ -12,6 +16,34 @@
 
     <h2 class="mb-4">Create a new data in the database.</h2>
     <table class="table">
+        <thead>
+            <tr>
+                <td>
+                    <div class="form-controls">
+                        <form method="post" class="block">
+
+                            <div>{{form.hidden_tag()}}</div>
+                            <div>{{form.name.label(class = "inline-label")}}{{form.name}}</div>
+                            <div>{{form.age.label(class = "inline-label")}}{{form.age}}</div>
+                            <div>{{form.designation.label(class = "inline-label")}}{{form.designation}}</div>
+                            <div>{{form.sallary.label(class = "inline-label")}}{{form.sallary}}</div>
+                            <div>{{form.yearsofwork.label(class = "inline-label")}}{{form.yearsofwork}}</div>
+                            <div>{{form.submit(class = "btn btn-primary mt-3 mb-1")}}</div>
+
+                        </form>
+                    </div>
+                </td>
+                <td colspan="3">
+                    <p>
+                        One way to create a new employee in the database is to fill a form on the from end such as this, which will write the data into a locally hosted sqlite database  
+                    </p>
+                    <p>
+                        Another way is to send a post request to the given path with the information as a <strong>JSON Payload</strong>
+                    </p>
+                </td>
+
+            </tr>
+        </thead>
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
@@ -24,10 +56,10 @@
         <tbody>
             <tr>
                 <th scope="row">1</th>
-                <td>/employee</td>
+                <td>api/employee</td>
                 <td>POST</td>
                 <td>
-<pre>
+                    <pre>
 {
     "name":"Smith",
     "age":40,
@@ -38,7 +70,7 @@
 </pre>
                 </td>
                 <td>
-<pre>
+                    <pre>
 {
     "age": 40,
     "designation": "Something",
@@ -52,8 +84,13 @@
             </tr>
         </tbody>
     </table>
+</div>
+
+
+
 
 </div>
-</div>
+
+
 
 {% endblock %}
