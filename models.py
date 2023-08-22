@@ -19,4 +19,4 @@ class EmpModel(db.Model):
         self.yow = yow
 
     def __repr__(self):
-        return f"NAME: {self.name} AGE: {self.age} SALLARY: {self.sallary} DESIGNATION: {self.designation}\n"
+        return f" ID: {self.id} -- NAME: {self.name} -- AGE: {self.age} -- SALLARY: {self.sallary} -- DESIGNATION: {self.designation}\n"
