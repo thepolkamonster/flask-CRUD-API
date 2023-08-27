@@ -1,5 +1,7 @@
 This is a simple FLASK API with all the basic CRUD operations
+
 It has a Web UI front-end and an API running to perform these operations
+
 All the details are described on the home page and the subsequent views.
 
 **To run this app:**
